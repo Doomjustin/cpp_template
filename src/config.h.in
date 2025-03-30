@@ -1,7 +1,7 @@
-#ifndef STORM_CONFIG_H
-#define STORM_CONFIG_H
+#ifndef CPP_TEMPLATE_CONFIG_H
+#define CPP_TEMPLATE_CONFIG_H
 
-namespace storm {
+namespace cpp_template {
 
 static constexpr auto PROJECT_VERSION = "@PROJECT_VERSION@";
 
@@ -15,6 +15,6 @@ static constexpr auto PROJECT_NAME = "@PROJECT_NAME@";
 
 static constexpr auto PROJECT_SOURCE_DIR = "@PROJECT_SOURCE_DIR@";
 
-} // namespace storm
+} // namespace cpp_template
 
-#endif // !STORM_CONFIG_H
+#endif // !CPP_TEMPLATE_CONFIG_H
