@@ -13,6 +13,7 @@ cmake_dependent_option(${PROJECT_NAME}_BUILD_TESTS
     "BUILD_TESTING" OFF
 )
 
+set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
 
@@ -25,6 +26,11 @@ include(CopyDllsForDebug)
 
 find_lto(CXX)
 
+include(InstallFmt)
+include(InstallSpdlog)
+# include(InstallCatch2)
+include(InstallDoctest)
+include(InstallPybind11)
 
 add_subdirectory(app)
 add_subdirectory(src)
