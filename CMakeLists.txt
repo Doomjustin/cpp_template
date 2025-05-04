@@ -26,6 +26,7 @@ include(CopyDllsForDebug)
 
 find_lto(CXX)
 
+include(InstallGSL)
 include(InstallFmt)
 include(InstallSpdlog)
 # include(InstallCatch2)
