@@ -8,7 +8,7 @@
 
 # target_compile_features(${PROJECT_NAME}_base INTERFACE cxx_std_23)
 
-# target_compile_definitions(${PROJECT_NAME}_base 
+# target_compile_definitions(${PROJECT_NAME}_base
 #     INTERFACE
 #         $<$<CONFIG:Debug>:CPP_TEMPLATE_DEBUG>
 #         $<$<CONFIG:Release>:DOCTEST_CONFIG_DISABLE>

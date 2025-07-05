@@ -1,0 +1,25 @@
+[submodule "external/Catch2"]
+	path = external/Catch2
+	url = https://github.com/catchorg/Catch2.git
+[submodule "external/fmt"]
+	path = external/fmt
+	url = https://github.com/fmtlib/fmt
+[submodule "external/spdlog"]
+	path = external/spdlog
+	url = https://github.com/gabime/spdlog.git
+[submodule "external/GSL"]
+	path = external/GSL
+	url = https://github.com/microsoft/GSL
+[submodule "external/pybind11"]
+	path = external/pybind11
+	url = https://github.com/pybind/pybind11.git
+	branch = stable
+[submodule "external/json"]
+	path = external/json
+	url = git@github.com:nlohmann/json.git
+[submodule "external/tomlplusplus"]
+	path = external/tomlplusplus
+	url = git@github.com:marzer/tomlplusplus.git
+[submodule "external/eigen"]
+	path = external/eigen
+	url = https://gitlab.com/libeigen/eigen.git

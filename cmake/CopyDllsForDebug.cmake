@@ -13,7 +13,7 @@ if(RUN_IT)
     fixup_bundle("${TO_FIXUP_FILE}" "${TO_FIXUP_LIBS}" "${TO_FIXUP_DIRS}")
 # End of script ran by the add_custom_command
 else()
-    function(copy_dlls_for_debug _target _libs _dirs)
+    function(copy_dlls_for_debug _target)
         if(WIN32)
             add_custom_command(TARGET ${_target} POST_BUILD
                 COMMAND ${CMAKE_COMMAND} -E copy -t $<TARGET_FILE_DIR:${_target}> $<TARGET_RUNTIME_DLLS:${_target}>
