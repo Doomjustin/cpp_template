@@ -49,4 +49,6 @@ cmake-build-release/
 out/
 
 # customer
-**/config.h
+**/config.cppm
+
+external/

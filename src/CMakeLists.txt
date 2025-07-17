@@ -1,18 +1,23 @@
-# add_library(${PROJECT_NAME}_base INTERFACE)
+add_library(externals INTERFACE)
 
-# add_library(${PROJECT_NAME}::base ALIAS ${PROJECT_NAME}_base)
+target_link_libraries(externals
+    INTERFACE
+        Microsoft.GSL::GSL
+        fmt::fmt
+        spdlog::spdlog
+        nlohmann_json::nlohmann_json
+        tomlplusplus::tomlplusplus
+)
 
-# target_link_libraries(${PROJECT_NAME}_base INTERFACE base)
+target_compile_definitions(externals
+    INTERFACE
+        $<$<CONFIG:Debug>:${PROJECT_NAME}_DEBUG>
+)
 
-# target_include_directories(${PROJECT_NAME}_base INTERFACE ${PROJECT_SOURCE_DIR}/include/)
-
-# target_compile_features(${PROJECT_NAME}_base INTERFACE cxx_std_23)
-
-# target_compile_definitions(${PROJECT_NAME}_base
-#     INTERFACE
-#         $<$<CONFIG:Debug>:CPP_TEMPLATE_DEBUG>
-#         $<$<CONFIG:Release>:DOCTEST_CONFIG_DISABLE>
-# )
+target_compile_features(externals
+    INTERFACE
+        cxx_std_23
+)
 
 
-configure_file(config.h.in ${PROJECT_SOURCE_DIR}/include/cpp_template/config.h @ONLY)
+add_subdirectory(common)
