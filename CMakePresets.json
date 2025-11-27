@@ -1,0 +1,58 @@
+{
+    "buildPresets": [
+        {
+            "configurePreset": "vcpkg-debug",
+            "displayName": "Debug Build",
+            "name": "debug"
+        },
+        {
+            "configurePreset": "vcpkg-release",
+            "displayName": "Release Build",
+            "name": "release"
+        },
+        {
+            "configurePreset": "vcpkg-relwithdebinfo",
+            "displayName": "RelWithDebInfo Build",
+            "name": "relwithdebinfo"
+        }
+    ],
+    "configurePresets": [
+        {
+            "binaryDir": "build/debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "VCPKG_TARGET_TRIPLET": "x64-windows"
+            },
+            "description": "Debug build using vcpkg dependencies",
+            "displayName": "Debug with vcpkg",
+            "generator": "Ninja",
+            "name": "vcpkg-debug"
+        },
+        {
+            "binaryDir": "build/release",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "VCPKG_TARGET_TRIPLET": "x64-windows"
+            },
+            "description": "Release build using vcpkg dependencies",
+            "displayName": "Release with vcpkg",
+            "generator": "Ninja",
+            "name": "vcpkg-release"
+        },
+        {
+            "binaryDir": "build/relwithdebinfo",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+                "VCPKG_TARGET_TRIPLET": "x64-windows"
+            },
+            "description": "Release with debug info using vcpkg dependencies",
+            "displayName": "RelWithDebInfo with vcpkg",
+            "generator": "Ninja",
+            "name": "vcpkg-relwithdebinfo"
+        }
+    ],
+    "version": 3
+}

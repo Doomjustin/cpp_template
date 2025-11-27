@@ -21,6 +21,10 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 include(ConfigSafeGuards)
 include(CopyDllsForDebug)
 include(CopyResources)
-include(InstallExternals)
 
 add_subdirectory(src)
+
+
+if (${PROJECT_NAME}_BUILD_TESTS)
+    add_subdirectory(test)
+endif()

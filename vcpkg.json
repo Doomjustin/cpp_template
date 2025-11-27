@@ -1,0 +1,11 @@
+{
+	"dependencies": [
+		"fmt",
+		"spdlog",
+		"ms-gsl",
+		"tomlplusplus",
+		"catch2"
+	],
+	"name": "cpp-template",
+	"version": "0.0.1"
+}
