@@ -37,7 +37,6 @@ Makefile
 Makefile.in
 
 # IDE
-.vscode/
 .cache/
 .vs/
 .idea/
